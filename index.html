@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title></title>
+    <title>Design Mode Bookmarklet</title>
+
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <main>
@@ -18,9 +20,11 @@
       <p>We want happy paintings. If you want sad things, watch the news. Be sure to use odorless paint-thinner. If it's not odorless, you'll find yourself working alone very, very quick. Gotta give him a friend. Like I always say 'everyone needs a friend'. Shwooop. Hehe. You have to make those little noises, or it just doesn't work. Maybe in our world there lives a happy little tree over there.</p>
       <p>Decide where your little footy hills live. Just put a few do-ers in there... Be sure to use odorless paint-thinner. If it's not odorless, you'll find yourself working alone very, very quick. Oh, you'd be in Agony City by now. The only thing worse than yellow snow is green snow.</p>
 
-      <p onclick="alert('temp');">This is some text you can click on.</p>
-
-      <a href="javascript:(function(){document.addEventListener('click',function(e){e.stopPropagation();e.preventDefault()},true);document.designMode='on'})()">blargle hargle</a>
+      <div style="margin: 2em 0; text-align: center;">
+        <a href="javascript:(function(){document.addEventListener('click',function(e){e.stopPropagation();e.preventDefault()},true);document.designMode='on'})()">
+          Enable Design Mode
+        </a>
+      </div>
     </main>
   </body>
 </html>
