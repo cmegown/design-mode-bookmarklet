@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -11,19 +14,28 @@
   </head>
   <body>
     <main>
-      <h1>Happy little ipsum.</h1>
+      <h1>Happy little ipsum</h1>
       <p>When I was teaching my son Steve to paint, I used to tell him, just pretend he was a whisper, and he floated right across the mountain, that easy, gentle, make love to it, caress it. Be sure to use odorless paint-thinner. If it's not odorless, you'll find yourself working alone very, very quick. The secret to doing anything is believing that you can do it. Anything that you believe you can do strong enough, you can do. Anything. As long as you believe. That's a crooked tree. We'll send him to Washington. And that makes it look like birch trees, isn't that sneaky? Heh. Ha.</p>
-      <h2>It's gorgeous.</h2>
+      <h2>It's gorgeous</h2>
       <p>Haha, and just beat the devil out of it. Try to imagine that you are a tree. How do you want to look out here? In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over, is the garbage. Roll it in a little bright red and lets sign this right in here. Luckily I have a short name so it's easy to sign.</p>
       <p>That's where the crows will sit. But we'll have to put an elevator to put them up there because they can't fly, but they don't know that, so they still try. You can put as many or as few as you want in your world. When I was teaching my son Steve to paint, I used to tell him, just pretend he was a whisper, and he floated right across the mountain, that easy, gentle, make love to it, caress it.</p>
-      <h3>Happy paintings.</h3>
+      <h3>Happy paintings</h3>
       <p>We want happy paintings. If you want sad things, watch the news. Be sure to use odorless paint-thinner. If it's not odorless, you'll find yourself working alone very, very quick. Gotta give him a friend. Like I always say 'everyone needs a friend'. Shwooop. Hehe. You have to make those little noises, or it just doesn't work. Maybe in our world there lives a happy little tree over there.</p>
       <p>Decide where your little footy hills live. Just put a few do-ers in there... Be sure to use odorless paint-thinner. If it's not odorless, you'll find yourself working alone very, very quick. Oh, you'd be in Agony City by now. The only thing worse than yellow snow is green snow.</p>
 
+      {% capture bookmarklet %}
+        (function() {
+          document.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+          }, true);
+          document.body.setAttribute('spellcheck', false);
+          document.designMode='on';
+        })();
+      {% endcapture %}
+
       <div style="margin: 2em 0; text-align: center;">
-        <a href="javascript:(function(){document.addEventListener('click',function(e){e.stopPropagation();e.preventDefault()},true);document.designMode='on'})()">
-          Enable Design Mode
-        </a>
+        <a href="javascript:{{ bookmarklet | strip_newlines | replace: ' ', '' }}">Enable Design Mode</a>
       </div>
     </main>
   </body>
