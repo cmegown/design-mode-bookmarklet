@@ -1,4 +1,4 @@
-# Design Mode Bookmarklet
+# design-mode-bookmarklet
 
 To get started:
 
